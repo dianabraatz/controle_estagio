@@ -28,6 +28,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
     <?= $this->Html->css('base.css') ?>
     <?= $this->Html->css('style.css') ?>
+    <?= $this->Html->css('choices/choices.css') ?>
+
+    <?= $this->Html->script('choices/choices.js') ?>
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
@@ -51,6 +54,12 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <div class="container clearfix">
         <?= $this->fetch('content') ?>
     </div>
+    <script>
+    ;(function() {
+        new Choices("select:not([multiple])");
+        new Choices("select[multiple]", { removeItemButton: true });
+    })();
+    </script>
     <footer>
     </footer>
 </body>
