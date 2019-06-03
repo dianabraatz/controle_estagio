@@ -10,7 +10,7 @@ use Cake\Validation\Validator;
  * Alunos Model
  *
  * @property \App\Model\Table\CursosTable|\Cake\ORM\Association\BelongsTo $Cursos
- * @property \App\Model\Table\EmpresasTable|\Cake\ORM\Association\BelongsToMany $Empresas
+ * @property |\Cake\ORM\Association\HasMany $Estagios
  *
  * @method \App\Model\Entity\Aluno get($primaryKey, $options = [])
  * @method \App\Model\Entity\Aluno newEntity($data = null, array $options = [])
@@ -41,10 +41,8 @@ class AlunosTable extends Table
             'foreignKey' => 'curso_id',
             'joinType' => 'INNER'
         ]);
-        $this->belongsToMany('Empresas', [
-            'foreignKey' => 'aluno_id',
-            'targetForeignKey' => 'empresa_id',
-            'joinTable' => 'alunos_empresas'
+        $this->hasMany('Estagios', [
+            'foreignKey' => 'aluno_id'
         ]);
     }
 

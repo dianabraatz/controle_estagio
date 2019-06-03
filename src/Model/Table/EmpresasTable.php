@@ -9,7 +9,7 @@ use Cake\Validation\Validator;
 /**
  * Empresas Model
  *
- * @property \App\Model\Table\AlunosTable|\Cake\ORM\Association\BelongsToMany $Alunos
+ * @property |\Cake\ORM\Association\HasMany $Estagios
  *
  * @method \App\Model\Entity\Empresa get($primaryKey, $options = [])
  * @method \App\Model\Entity\Empresa newEntity($data = null, array $options = [])
@@ -36,10 +36,8 @@ class EmpresasTable extends Table
         $this->setDisplayField('id');
         $this->setPrimaryKey('id');
 
-        $this->belongsToMany('Alunos', [
-            'foreignKey' => 'empresa_id',
-            'targetForeignKey' => 'aluno_id',
-            'joinTable' => 'alunos_empresas'
+        $this->hasMany('Estagios', [
+            'foreignKey' => 'empresa_id'
         ]);
     }
 
