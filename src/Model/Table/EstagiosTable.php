@@ -34,7 +34,7 @@ class EstagiosTable extends Table
         parent::initialize($config);
 
         $this->setTable('estagios');
-        $this->setDisplayField('id');
+        $this->setDisplayField('ano');
         $this->setPrimaryKey('id');
 
         $this->belongsTo('Alunos', [

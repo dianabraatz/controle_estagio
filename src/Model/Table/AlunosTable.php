@@ -34,7 +34,7 @@ class AlunosTable extends Table
         parent::initialize($config);
 
         $this->setTable('alunos');
-        $this->setDisplayField('id');
+        $this->setDisplayField('nome');
         $this->setPrimaryKey('id');
 
         $this->belongsTo('Cursos', [

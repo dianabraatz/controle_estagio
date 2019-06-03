@@ -31,7 +31,7 @@ class DocumentosTable extends Table
         parent::initialize($config);
 
         $this->setTable('documentos');
-        $this->setDisplayField('id');
+        $this->setDisplayField('nome');
         $this->setPrimaryKey('id');
     }
 
