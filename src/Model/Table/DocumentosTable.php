@@ -9,6 +9,8 @@ use Cake\Validation\Validator;
 /**
  * Documentos Model
  *
+ * @property |\Cake\ORM\Association\BelongsToMany $Cursos
+ *
  * @method \App\Model\Entity\Documento get($primaryKey, $options = [])
  * @method \App\Model\Entity\Documento newEntity($data = null, array $options = [])
  * @method \App\Model\Entity\Documento[] newEntities(array $data, array $options = [])
@@ -33,6 +35,12 @@ class DocumentosTable extends Table
         $this->setTable('documentos');
         $this->setDisplayField('nome');
         $this->setPrimaryKey('id');
+
+        $this->belongsToMany('Cursos', [
+            'foreignKey' => 'documento_id',
+            'targetForeignKey' => 'curso_id',
+            'joinTable' => 'cursos_documentos'
+        ]);
     }
 
     /**
