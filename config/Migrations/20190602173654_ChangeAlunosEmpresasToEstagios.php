@@ -11,7 +11,7 @@ class ChangeAlunosEmpresasToEstagios extends AbstractMigration
     public function change()
     {
         $table = $this->table('alunos_empresas');
-        
+
         $table->addIndex('aluno_id');
         $table->addColumn('id', 'integer', [
             'default' => null,
