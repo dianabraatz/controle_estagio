@@ -8,8 +8,8 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('List Empresas'), ['action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('List Alunos'), ['controller' => 'Alunos', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Aluno'), ['controller' => 'Alunos', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Estagios'), ['controller' => 'Estagios', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Estagio'), ['controller' => 'Estagios', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="empresas form large-9 medium-8 columns content">
@@ -20,7 +20,6 @@
             echo $this->Form->control('nome');
             echo $this->Form->control('razao_social');
             echo $this->Form->control('cnpj');
-            echo $this->Form->control('alunos._ids', ['options' => $alunos]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
