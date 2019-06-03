@@ -16,6 +16,8 @@
         <li><?= $this->Html->link(__('List Cursos'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Alunos'), ['controller' => 'Alunos', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Aluno'), ['controller' => 'Alunos', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Documentos'), ['controller' => 'Documentos', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Documento'), ['controller' => 'Documentos', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="cursos form large-9 medium-8 columns content">
@@ -24,6 +26,7 @@
         <legend><?= __('Edit Curso') ?></legend>
         <?php
             echo $this->Form->control('nome');
+            echo $this->Form->control('documentos._ids', ['options' => $documentos]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
