@@ -10,8 +10,8 @@
         <li><?= $this->Html->link(__('List Alunos'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Cursos'), ['controller' => 'Cursos', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Curso'), ['controller' => 'Cursos', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Empresas'), ['controller' => 'Empresas', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Empresa'), ['controller' => 'Empresas', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Estagios'), ['controller' => 'Estagios', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Estagio'), ['controller' => 'Estagios', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="alunos form large-9 medium-8 columns content">
@@ -24,7 +24,6 @@
             echo $this->Form->control('cpf');
             echo $this->Form->control('email');
             echo $this->Form->control('curso_id', ['options' => $cursos]);
-            echo $this->Form->control('empresas._ids', ['options' => $empresas]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

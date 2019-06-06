@@ -10,8 +10,8 @@
         <li><?= $this->Html->link(__('New Aluno'), ['action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Cursos'), ['controller' => 'Cursos', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Curso'), ['controller' => 'Cursos', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Empresas'), ['controller' => 'Empresas', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Empresa'), ['controller' => 'Empresas', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Estagios'), ['controller' => 'Estagios', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Estagio'), ['controller' => 'Estagios', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="alunos index large-9 medium-8 columns content">
@@ -36,7 +36,7 @@
                 <td><?= h($aluno->rg) ?></td>
                 <td><?= h($aluno->cpf) ?></td>
                 <td><?= h($aluno->email) ?></td>
-                <td><?= $aluno->has('curso') ? $this->Html->link($aluno->curso->id, ['controller' => 'Cursos', 'action' => 'view', $aluno->curso->id]) : '' ?></td>
+                <td><?= $aluno->has('curso') ? $this->Html->link($aluno->curso->nome, ['controller' => 'Cursos', 'action' => 'view', $aluno->curso->id]) : '' ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $aluno->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $aluno->id]) ?>

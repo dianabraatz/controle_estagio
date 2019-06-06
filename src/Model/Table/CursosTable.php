@@ -10,6 +10,7 @@ use Cake\Validation\Validator;
  * Cursos Model
  *
  * @property \App\Model\Table\AlunosTable|\Cake\ORM\Association\HasMany $Alunos
+ * @property |\Cake\ORM\Association\BelongsToMany $Documentos
  *
  * @method \App\Model\Entity\Curso get($primaryKey, $options = [])
  * @method \App\Model\Entity\Curso newEntity($data = null, array $options = [])
@@ -33,11 +34,16 @@ class CursosTable extends Table
         parent::initialize($config);
 
         $this->setTable('cursos');
-        $this->setDisplayField('id');
+        $this->setDisplayField('nome');
         $this->setPrimaryKey('id');
 
         $this->hasMany('Alunos', [
             'foreignKey' => 'curso_id'
+        ]);
+        $this->belongsToMany('Documentos', [
+            'foreignKey' => 'curso_id',
+            'targetForeignKey' => 'documento_id',
+            'joinTable' => 'cursos_documentos'
         ]);
     }
 
