@@ -1,0 +1,25 @@
+.top-bar {
+    z-index: 4;
+}
+
+#overlay {
+    z-index: 2;
+}
+
+#sidebarButton {
+    font-size: 24px;
+    background-color: #01545b;
+    transition: background-color .3s;
+}
+
+#sidebar {
+    width: 300px;
+    left: -300px;
+    max-height: calc(-45px + 100vh);
+    z-index: 3;
+    transition: left .4s;
+}
+
+#sidebar a {
+    color: #fff;
+}
