@@ -1,5 +1,14 @@
 .top-bar {
     z-index: 4;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.main-content {
+    position: relative;
+    top: 45px;
 }
 
 #overlay {
@@ -15,6 +24,7 @@
 #sidebar {
     width: 300px;
     left: -300px;
+    top: 45px;
     max-height: calc(-45px + 100vh);
     z-index: 3;
     transition: left .4s;

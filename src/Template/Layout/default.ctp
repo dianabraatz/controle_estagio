@@ -44,7 +44,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         <div class="top-bar-section">
             <ul class="left">
                 <li>
-                    <a href="#" id="sidebarButton" style="font-size: 24px;">&#9776;</a>
+                    <a href="#" id="sidebarButton" class="w3-center">&#9776;</a>
                 </li>
             </ul>
         </div>
@@ -76,7 +76,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
     <?= $this->Flash->render() ?>
 
-    <div class="container clearfix">
+    <div class="main-content container clearfix">
         <?= $this->fetch('content') ?>
     </div>
 
