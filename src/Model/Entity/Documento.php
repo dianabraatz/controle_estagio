@@ -23,6 +23,7 @@ class Documento extends Entity
      */
     protected $_accessible = [
         'nome' => true,
-        'descricao' => true
+        'descricao' => true,
+        'cursos' => true
     ];
 }
