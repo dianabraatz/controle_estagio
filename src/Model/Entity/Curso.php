@@ -24,6 +24,7 @@ class Curso extends Entity
      */
     protected $_accessible = [
         'nome' => true,
-        'alunos' => true
+        'alunos' => true,
+        'documentos' => true
     ];
 }
