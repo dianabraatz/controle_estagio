@@ -41,6 +41,12 @@ class DocumentosTable extends Table
             'targetForeignKey' => 'curso_id',
             'joinTable' => 'cursos_documentos'
         ]);
+
+        $this->belongsToMany('Estagios', [
+            'through' => 'documentos_estagios',
+            'foreignKey' => 'documento_id',
+            'targetForeignKey' => 'estagio_id'
+        ]);
     }
 
     /**

@@ -41,9 +41,16 @@ class EstagiosTable extends Table
             'foreignKey' => 'aluno_id',
             'joinType' => 'INNER'
         ]);
+
         $this->belongsTo('Empresas', [
             'foreignKey' => 'empresa_id',
             'joinType' => 'INNER'
+        ]);
+
+        $this->belongsToMany('Documentos', [
+            'through' => 'documentos_estagios',
+            'foreignKey' => 'estagio_id',
+            'targetForeignKey' => 'documento_id'
         ]);
     }
 
