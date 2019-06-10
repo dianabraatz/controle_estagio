@@ -34,7 +34,7 @@ class EmpresasController extends AppController
     public function view($id = null)
     {
         $empresa = $this->Empresas->get($id, [
-            'contain' => ['Alunos']
+            'contain' => ['Estagios']
         ]);
 
         $this->set('empresa', $empresa);
@@ -57,8 +57,7 @@ class EmpresasController extends AppController
             }
             $this->Flash->error(__('The empresa could not be saved. Please, try again.'));
         }
-        $alunos = $this->Empresas->Alunos->find('list', ['limit' => 200]);
-        $this->set(compact('empresa', 'alunos'));
+        $this->set(compact('empresa'));
     }
 
     /**
@@ -71,7 +70,7 @@ class EmpresasController extends AppController
     public function edit($id = null)
     {
         $empresa = $this->Empresas->get($id, [
-            'contain' => ['Alunos']
+            'contain' => []
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $empresa = $this->Empresas->patchEntity($empresa, $this->request->getData());
@@ -82,8 +81,7 @@ class EmpresasController extends AppController
             }
             $this->Flash->error(__('The empresa could not be saved. Please, try again.'));
         }
-        $alunos = $this->Empresas->Alunos->find('list', ['limit' => 200]);
-        $this->set(compact('empresa', 'alunos'));
+        $this->set(compact('empresa'));
     }
 
     /**

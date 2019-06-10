@@ -4,14 +4,17 @@ namespace App\Model\Entity;
 use Cake\ORM\Entity;
 
 /**
- * Curso Entity
+ * Estagio Entity
  *
+ * @property int $aluno_id
+ * @property int $empresa_id
  * @property int $id
- * @property string $nome
+ * @property int $ano
  *
- * @property \App\Model\Entity\Aluno[] $alunos
+ * @property \App\Model\Entity\Aluno $aluno
+ * @property \App\Model\Entity\Empresa $empresa
  */
-class Curso extends Entity
+class Estagio extends Entity
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().
@@ -23,8 +26,10 @@ class Curso extends Entity
      * @var array
      */
     protected $_accessible = [
-        'nome' => true,
-        'alunos' => true,
-        'documentos' => true
+        'aluno_id' => true,
+        'empresa_id' => true,
+        'ano' => true,
+        'aluno' => true,
+        'empresa' => true
     ];
 }

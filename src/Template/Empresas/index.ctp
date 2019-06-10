@@ -8,8 +8,8 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Empresa'), ['action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Alunos'), ['controller' => 'Alunos', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Aluno'), ['controller' => 'Alunos', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Estagios'), ['controller' => 'Estagios', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Estagio'), ['controller' => 'Estagios', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="empresas index large-9 medium-8 columns content">

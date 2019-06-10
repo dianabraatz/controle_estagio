@@ -37,7 +37,7 @@ class AlunosController extends AppController
     public function view($id = null)
     {
         $aluno = $this->Alunos->get($id, [
-            'contain' => ['Cursos', 'Empresas']
+            'contain' => ['Cursos', 'Estagios']
         ]);
 
         $this->set('aluno', $aluno);
@@ -61,8 +61,7 @@ class AlunosController extends AppController
             $this->Flash->error(__('The aluno could not be saved. Please, try again.'));
         }
         $cursos = $this->Alunos->Cursos->find('list', ['limit' => 200]);
-        $empresas = $this->Alunos->Empresas->find('list', ['limit' => 200]);
-        $this->set(compact('aluno', 'cursos', 'empresas'));
+        $this->set(compact('aluno', 'cursos'));
     }
 
     /**
@@ -75,7 +74,7 @@ class AlunosController extends AppController
     public function edit($id = null)
     {
         $aluno = $this->Alunos->get($id, [
-            'contain' => ['Empresas']
+            'contain' => []
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $aluno = $this->Alunos->patchEntity($aluno, $this->request->getData());
@@ -87,8 +86,7 @@ class AlunosController extends AppController
             $this->Flash->error(__('The aluno could not be saved. Please, try again.'));
         }
         $cursos = $this->Alunos->Cursos->find('list', ['limit' => 200]);
-        $empresas = $this->Alunos->Empresas->find('list', ['limit' => 200]);
-        $this->set(compact('aluno', 'cursos', 'empresas'));
+        $this->set(compact('aluno', 'cursos'));
     }
 
     /**

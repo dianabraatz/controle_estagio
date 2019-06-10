@@ -34,7 +34,7 @@ class CursosController extends AppController
     public function view($id = null)
     {
         $curso = $this->Cursos->get($id, [
-            'contain' => ['Alunos']
+            'contain' => ['Documentos', 'Alunos']
         ]);
 
         $this->set('curso', $curso);
@@ -57,7 +57,8 @@ class CursosController extends AppController
             }
             $this->Flash->error(__('The curso could not be saved. Please, try again.'));
         }
-        $this->set(compact('curso'));
+        $documentos = $this->Cursos->Documentos->find('list', ['limit' => 200]);
+        $this->set(compact('curso', 'documentos'));
     }
 
     /**
@@ -70,7 +71,7 @@ class CursosController extends AppController
     public function edit($id = null)
     {
         $curso = $this->Cursos->get($id, [
-            'contain' => []
+            'contain' => ['Documentos']
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $curso = $this->Cursos->patchEntity($curso, $this->request->getData());
@@ -81,7 +82,8 @@ class CursosController extends AppController
             }
             $this->Flash->error(__('The curso could not be saved. Please, try again.'));
         }
-        $this->set(compact('curso'));
+        $documentos = $this->Cursos->Documentos->find('list', ['limit' => 200]);
+        $this->set(compact('curso', 'documentos'));
     }
 
     /**

@@ -19,7 +19,9 @@ class CursosControllerTest extends TestCase
      */
     public $fixtures = [
         'app.Cursos',
-        'app.Alunos'
+        'app.Alunos',
+        'app.Documentos',
+        'app.CursosDocumentos'
     ];
 
     /**

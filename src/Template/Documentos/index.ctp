@@ -1,21 +1,19 @@
 <?php
 /**
  * @var \App\View\AppView $this
- * @var \App\Model\Entity\Curso[]|\Cake\Collection\CollectionInterface $cursos
+ * @var \App\Model\Entity\Documento[]|\Cake\Collection\CollectionInterface $documentos
  */
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New Curso'), ['action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Alunos'), ['controller' => 'Alunos', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Aluno'), ['controller' => 'Alunos', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Documentos'), ['controller' => 'Documentos', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Documento'), ['controller' => 'Documentos', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('New Documento'), ['action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Cursos'), ['controller' => 'Cursos', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Curso'), ['controller' => 'Cursos', 'action' => 'add']) ?></li>
     </ul>
 </nav>
-<div class="cursos index large-9 medium-8 columns content">
-    <h3><?= __('Cursos') ?></h3>
+<div class="documentos index large-9 medium-8 columns content">
+    <h3><?= __('Documentos') ?></h3>
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
@@ -25,14 +23,14 @@
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($cursos as $curso): ?>
+            <?php foreach ($documentos as $documento): ?>
             <tr>
-                <td><?= $this->Number->format($curso->id) ?></td>
-                <td><?= h($curso->nome) ?></td>
+                <td><?= $this->Number->format($documento->id) ?></td>
+                <td><?= h($documento->nome) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $curso->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $curso->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $curso->id], ['confirm' => __('Are you sure you want to delete # {0}?', $curso->id)]) ?>
+                    <?= $this->Html->link(__('View'), ['action' => 'view', $documento->id]) ?>
+                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $documento->id]) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $documento->id], ['confirm' => __('Are you sure you want to delete # {0}?', $documento->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>
