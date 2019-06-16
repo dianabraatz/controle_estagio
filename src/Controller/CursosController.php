@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\ORM\TableRegistry;
 
 /**
  * Cursos Controller
@@ -104,5 +105,76 @@ class CursosController extends AppController
         }
 
         return $this->redirect(['action' => 'index']);
+    }
+
+    public function checklist($id = null)
+    {
+        if ($this->request->is('post')) {
+            $data = $this->request->getData();
+            /** @var Array.<Array.<Boolean>> $documentos_estagios */
+            $documentos_estagios = [];
+
+            if (isset($data['documentos_estagios'])) {
+                $documentos_estagios = $data['documentos_estagios'];
+            }
+
+            $DocumentosEstagios = TableRegistry::getTableLocator()->get('DocumentosEstagios');
+
+            $records = [];
+
+            foreach ($documentos_estagios as $estagio_id => $estagio) {
+                foreach ($estagio as $documento_id => $documento) {
+                    $record = $DocumentosEstagios->find()->where([
+                        'documento_id' => $documento_id,
+                        'estagio_id' => $estagio_id
+                    ])->first();
+
+                    if ($record === null) {
+                        $record = $DocumentosEstagios->newEntity([
+                            'estagio_id' => $estagio_id,
+                            'documento_id' => $documento_id
+                        ]);
+                    }
+
+                    $record->entregue = !!$documento['entregue'];
+                    $records[] = $record;
+                }
+            }
+
+            if ($DocumentosEstagios->saveMany($records)) {
+                $this->Flash->success(__('Changes were saved.'));
+            } else {
+                $this->Flash->error(__('Changes could not be saved. Please try again.'));
+            }
+        }
+
+        $this->paginate = [
+            'contain' => [
+                'Documentos',
+                'Empresas',
+                'Alunos',
+                'Alunos.Cursos',
+                'Alunos.Cursos.Documentos',
+                'DocumentosEstagios',
+            ],
+            'conditions' => [
+                'Alunos.curso_id' => $id
+            ],
+            'sortWhitelist' => [
+                'Alunos.nome',
+                'ano'
+            ]
+        ];
+
+        $curso = $this->Cursos->get($id, [
+            'contain' => [
+                'Documentos'
+            ]
+        ]);
+
+        $Estagios = TableRegistry::getTableLocator()->get('Estagios');
+        $estagios = $this->paginate($Estagios);
+
+        $this->set(compact('curso', 'estagios'));
     }
 }
