@@ -13,7 +13,7 @@ class CreateDocumentosEstagios extends AbstractMigration
     public function change()
     {
         $table = $this->table('documentos_estagios',
-            ['id' => false, 'primaryKey' => ['documento_id', 'estagio_id']]);
+            ['id' => false, 'primary_key' => ['documento_id', 'estagio_id']]);
         $table->addColumn('documento_id', 'integer', [
             'default' => null,
             'limit' => 11,
