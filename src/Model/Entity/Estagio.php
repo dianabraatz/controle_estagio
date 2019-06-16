@@ -2,6 +2,7 @@
 namespace App\Model\Entity;
 
 use Cake\ORM\Entity;
+use Cake\ORM\TableRegistry;
 
 /**
  * Estagio Entity
@@ -13,6 +14,7 @@ use Cake\ORM\Entity;
  *
  * @property \App\Model\Entity\Aluno $aluno
  * @property \App\Model\Entity\Empresa $empresa
+ * @property \App\Model\Entity\Documento[] $documentos
  */
 class Estagio extends Entity
 {
@@ -30,6 +32,39 @@ class Estagio extends Entity
         'empresa_id' => true,
         'ano' => true,
         'aluno' => true,
-        'empresa' => true
+        'empresa' => true,
+        'documentos_estagios' => true
     ];
+
+    protected function _getDocumentosEstagiosCurso()
+    {
+        /** @var \App\Model\Table\DocumentosEstagiosTable $DocumentosEstagios */
+        $DocumentosEstagios = TableRegistry::getTableLocator()->get('DocumentosEstagios');
+
+        /** @var \App\Model\Table\DocumentosTable $Documentos */
+        $Documentos = TableRegistry::getTableLocator()->get('Documentos');
+
+        $id_documentos =  array_map(function($elem) {
+            return $elem->id;
+        }, $this->documentos);
+
+        $missing_documentos = $Documentos->find();
+        if (count($id_documentos)) {
+            $missing_documentos->where([
+                'id NOT IN' => $id_documentos
+            ]);
+        }
+
+        $de = $this->documentos_estagios;
+
+        foreach ($missing_documentos as $md) {
+            $de[] = $DocumentosEstagios->newEntity([
+                'estagio_id' => $this->id,
+                'documento_id' => $md->id,
+                'entregue' => false
+            ]);
+        }
+
+        return $de;
+    }
 }

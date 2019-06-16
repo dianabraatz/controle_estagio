@@ -48,10 +48,12 @@ class EstagiosTable extends Table
         ]);
 
         $this->belongsToMany('Documentos', [
-            'through' => 'documentos_estagios',
+            'through' => 'DocumentosEstagios',
             'foreignKey' => 'estagio_id',
             'targetForeignKey' => 'documento_id'
         ]);
+
+        $this->hasMany('DocumentosEstagios');
     }
 
     /**
