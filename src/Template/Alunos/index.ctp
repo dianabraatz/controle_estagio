@@ -19,10 +19,10 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+                <!--<th scope="col"><?= $this->Paginator->sort('id') ?></th>-->
                 <th scope="col"><?= $this->Paginator->sort('nome') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('rg') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('cpf') ?></th>
+                <!--<th scope="col"><?= $this->Paginator->sort('rg') ?></th>-->
+                <!--<th scope="col"><?= $this->Paginator->sort('cpf') ?></th>-->
                 <th scope="col"><?= $this->Paginator->sort('email') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('curso_id') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
@@ -31,10 +31,10 @@
         <tbody>
             <?php foreach ($alunos as $aluno): ?>
             <tr>
-                <td><?= $this->Number->format($aluno->id) ?></td>
+                <!--<td><?= $this->Number->format($aluno->id) ?></td>-->
                 <td><?= h($aluno->nome) ?></td>
-                <td><?= h($aluno->rg) ?></td>
-                <td><?= h($aluno->cpf) ?></td>
+                <!--<td><?= h($aluno->rg) ?></td>-->
+                <!--<td><?= h($aluno->cpf) ?></td>-->
                 <td><?= h($aluno->email) ?></td>
                 <td><?= $aluno->has('curso') ? $this->Html->link($aluno->curso->nome, ['controller' => 'Cursos', 'action' => 'view', $aluno->curso->id]) : '' ?></td>
                 <td class="actions">
