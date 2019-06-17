@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2019-06-06 20:47+0000\n"
+"POT-Creation-Date: 2019-06-10 22:58+0000\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -14,52 +14,84 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: Controller/AlunosController.php:57;83
+#: Controller/AlunosController.php:57;82
 msgid "The aluno has been saved."
 msgstr ""
 
-#: Controller/AlunosController.php:61;87
+#: Controller/AlunosController.php:61;86
 msgid "The aluno could not be saved. Please, try again."
 msgstr ""
 
-#: Controller/AlunosController.php:106
+#: Controller/AlunosController.php:104
 msgid "The aluno has been deleted."
 msgstr ""
 
-#: Controller/AlunosController.php:108
+#: Controller/AlunosController.php:106
 msgid "The aluno could not be deleted. Please, try again."
 msgstr ""
 
-#: Controller/CursosController.php:54;78
+#: Controller/CursosController.php:54;79
 msgid "The curso has been saved."
 msgstr ""
 
-#: Controller/CursosController.php:58;82
+#: Controller/CursosController.php:58;83
 msgid "The curso could not be saved. Please, try again."
 msgstr ""
 
-#: Controller/CursosController.php:99
+#: Controller/CursosController.php:101
 msgid "The curso has been deleted."
 msgstr ""
 
-#: Controller/CursosController.php:101
+#: Controller/CursosController.php:103
 msgid "The curso could not be deleted. Please, try again."
 msgstr ""
 
-#: Controller/EmpresasController.php:54;79
+#: Controller/DocumentosController.php:54;79
+msgid "The documento has been saved."
+msgstr ""
+
+#: Controller/DocumentosController.php:58;83
+msgid "The documento could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/DocumentosController.php:101
+msgid "The documento has been deleted."
+msgstr ""
+
+#: Controller/DocumentosController.php:103
+msgid "The documento could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/EmpresasController.php:54;78
 msgid "The empresa has been saved."
 msgstr ""
 
-#: Controller/EmpresasController.php:58;83
+#: Controller/EmpresasController.php:58;82
 msgid "The empresa could not be saved. Please, try again."
 msgstr ""
 
-#: Controller/EmpresasController.php:101
+#: Controller/EmpresasController.php:99
 msgid "The empresa has been deleted."
 msgstr ""
 
-#: Controller/EmpresasController.php:103
+#: Controller/EmpresasController.php:101
 msgid "The empresa could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/EstagiosController.php:57;83
+msgid "The estagio has been saved."
+msgstr ""
+
+#: Controller/EstagiosController.php:61;87
+msgid "The estagio could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/EstagiosController.php:106
+msgid "The estagio has been deleted."
+msgstr ""
+
+#: Controller/EstagiosController.php:108
+msgid "The estagio could not be deleted. Please, try again."
 msgstr ""
 
 #: Controller/ProfessoresController.php:54;78
@@ -108,12 +140,20 @@ msgstr ""
 #: Template/Alunos/view.ctp:9;57
 #: Template/Cursos/add.ctp:9
 #: Template/Cursos/edit.ctp:9
-#: Template/Cursos/index.ctp:9;22
-#: Template/Cursos/view.ctp:9;41
+#: Template/Cursos/index.ctp:9;24
+#: Template/Cursos/view.ctp:9;40;68
+#: Template/Documentos/add.ctp:9
+#: Template/Documentos/edit.ctp:9
+#: Template/Documentos/index.ctp:9;22
+#: Template/Documentos/view.ctp:9;41
 #: Template/Empresas/add.ctp:9
 #: Template/Empresas/edit.ctp:9
 #: Template/Empresas/index.ctp:9;24
-#: Template/Empresas/view.ctp:9;49
+#: Template/Empresas/view.ctp:9;47
+#: Template/Estagios/add.ctp:9
+#: Template/Estagios/edit.ctp:9
+#: Template/Estagios/index.ctp:9;26
+#: Template/Estagios/view.ctp:9
 #: Template/Professores/add.ctp:9
 #: Template/Professores/edit.ctp:9
 #: Template/Professores/index.ctp:9;20
@@ -123,7 +163,7 @@ msgstr ""
 #: Template/Users/index.ctp:9;21
 #: Template/Users/view.ctp:9
 msgid "Actions"
-msgstr ""
+msgstr "Ações"
 
 #: Template/Alunos/add.ctp:10
 #: Template/Alunos/edit.ctp:16
@@ -132,12 +172,12 @@ msgstr ""
 #: Template/Cursos/edit.ctp:17
 #: Template/Cursos/index.ctp:11
 #: Template/Cursos/view.ctp:14
-#: Template/Empresas/add.ctp:11
-#: Template/Empresas/edit.ctp:17
-#: Template/Empresas/index.ctp:11
-#: Template/Empresas/view.ctp:14
+#: Template/Estagios/add.ctp:11
+#: Template/Estagios/edit.ctp:17
+#: Template/Estagios/index.ctp:11
+#: Template/Estagios/view.ctp:14
 msgid "List Alunos"
-msgstr ""
+msgstr "Listar Alunos"
 
 #: Template/Alunos/add.ctp:11
 #: Template/Alunos/edit.ctp:17
@@ -146,8 +186,12 @@ msgstr ""
 #: Template/Cursos/add.ctp:10
 #: Template/Cursos/edit.ctp:16
 #: Template/Cursos/view.ctp:12
+#: Template/Documentos/add.ctp:11
+#: Template/Documentos/edit.ctp:17
+#: Template/Documentos/index.ctp:11
+#: Template/Documentos/view.ctp:14
 msgid "List Cursos"
-msgstr ""
+msgstr "Listar Cursos"
 
 #: Template/Alunos/add.ctp:12
 #: Template/Alunos/edit.ctp:18
@@ -155,70 +199,97 @@ msgstr ""
 #: Template/Alunos/view.ctp:15
 #: Template/Cursos/index.ctp:10
 #: Template/Cursos/view.ctp:13
+#: Template/Documentos/add.ctp:12
+#: Template/Documentos/edit.ctp:18
+#: Template/Documentos/index.ctp:12
+#: Template/Documentos/view.ctp:15
 msgid "New Curso"
-msgstr ""
+msgstr "Novo Curso"
 
 #: Template/Alunos/add.ctp:13
 #: Template/Alunos/edit.ctp:19
 #: Template/Alunos/index.ctp:13
 #: Template/Alunos/view.ctp:16
-#: Template/Empresas/add.ctp:10
-#: Template/Empresas/edit.ctp:16
-#: Template/Empresas/view.ctp:12
-msgid "List Empresas"
-msgstr ""
+#: Template/Empresas/add.ctp:11
+#: Template/Empresas/edit.ctp:17
+#: Template/Empresas/index.ctp:11
+#: Template/Empresas/view.ctp:14
+#: Template/Estagios/add.ctp:10
+#: Template/Estagios/edit.ctp:16
+#: Template/Estagios/view.ctp:12
+msgid "List Estagios"
+msgstr "Listar Estágios"
 
 #: Template/Alunos/add.ctp:14
 #: Template/Alunos/edit.ctp:20
 #: Template/Alunos/index.ctp:14
 #: Template/Alunos/view.ctp:17
-#: Template/Empresas/index.ctp:10
-#: Template/Empresas/view.ctp:13
-msgid "New Empresa"
-msgstr ""
+#: Template/Empresas/add.ctp:12
+#: Template/Empresas/edit.ctp:18
+#: Template/Empresas/index.ctp:12
+#: Template/Empresas/view.ctp:15
+#: Template/Estagios/index.ctp:10
+#: Template/Estagios/view.ctp:13
+msgid "New Estagio"
+msgstr "Novo Estágio"
 
 #: Template/Alunos/add.ctp:20
 msgid "Add Aluno"
-msgstr ""
+msgstr "Adicionar Aluno"
 
-#: Template/Alunos/add.ctp:30
-#: Template/Alunos/edit.ctp:36
-#: Template/Cursos/add.ctp:23
-#: Template/Cursos/edit.ctp:29
-#: Template/Empresas/add.ctp:26
-#: Template/Empresas/edit.ctp:32
+#: Template/Alunos/add.ctp:29
+#: Template/Alunos/edit.ctp:35
+#: Template/Cursos/add.ctp:26
+#: Template/Cursos/edit.ctp:32
+#: Template/Documentos/add.ctp:25
+#: Template/Documentos/edit.ctp:31
+#: Template/Empresas/add.ctp:25
+#: Template/Empresas/edit.ctp:31
+#: Template/Estagios/add.ctp:27
+#: Template/Estagios/edit.ctp:33
 #: Template/Professores/add.ctp:21
 #: Template/Professores/edit.ctp:27
 #: Template/Users/add.ctp:22
 #: Template/Users/edit.ctp:28
 msgid "Submit"
-msgstr ""
+msgstr "Enviar"
 
 #: Template/Alunos/edit.ctp:11
 #: Template/Alunos/index.ctp:43
 #: Template/Alunos/view.ctp:68
 #: Template/Cursos/edit.ctp:11
-#: Template/Cursos/index.ctp:33
-#: Template/Cursos/view.ctp:54
+#: Template/Cursos/index.ctp:35
+#: Template/Cursos/view.ctp:50;81
+#: Template/Documentos/edit.ctp:11
+#: Template/Documentos/index.ctp:33
+#: Template/Documentos/view.ctp:50
 #: Template/Empresas/edit.ctp:11
 #: Template/Empresas/index.ctp:37
-#: Template/Empresas/view.ctp:62
+#: Template/Empresas/view.ctp:58
+#: Template/Estagios/edit.ctp:11
+#: Template/Estagios/index.ctp:39
 #: Template/Professores/edit.ctp:11
 #: Template/Professores/index.ctp:31
 #: Template/Users/edit.ctp:11
 #: Template/Users/index.ctp:33
 msgid "Delete"
-msgstr ""
+msgstr "Deletar"
 
 #: Template/Alunos/edit.ctp:13
 #: Template/Alunos/index.ctp:43
 #: Template/Alunos/view.ctp:11;68
 #: Template/Cursos/edit.ctp:13
-#: Template/Cursos/index.ctp:33
-#: Template/Cursos/view.ctp:11;54
+#: Template/Cursos/index.ctp:35
+#: Template/Cursos/view.ctp:11;50;81
+#: Template/Documentos/edit.ctp:13
+#: Template/Documentos/index.ctp:33
+#: Template/Documentos/view.ctp:11;50
 #: Template/Empresas/edit.ctp:13
 #: Template/Empresas/index.ctp:37
-#: Template/Empresas/view.ctp:11;62
+#: Template/Empresas/view.ctp:11;58
+#: Template/Estagios/edit.ctp:13
+#: Template/Estagios/index.ctp:39
+#: Template/Estagios/view.ctp:11
 #: Template/Professores/edit.ctp:13
 #: Template/Professores/index.ctp:31
 #: Template/Professores/view.ctp:11
@@ -231,7 +302,7 @@ msgstr ""
 #: Template/Alunos/edit.ctp:26
 #: Template/Alunos/view.ctp:10
 msgid "Edit Aluno"
-msgstr ""
+msgstr "Editar Aluno"
 
 #: Template/Alunos/index.ctp:10
 #: Template/Alunos/view.ctp:13
@@ -239,12 +310,12 @@ msgstr ""
 #: Template/Cursos/edit.ctp:18
 #: Template/Cursos/index.ctp:12
 #: Template/Cursos/view.ctp:15
-#: Template/Empresas/add.ctp:12
-#: Template/Empresas/edit.ctp:18
-#: Template/Empresas/index.ctp:12
-#: Template/Empresas/view.ctp:15
+#: Template/Estagios/add.ctp:12
+#: Template/Estagios/edit.ctp:18
+#: Template/Estagios/index.ctp:12
+#: Template/Estagios/view.ctp:15
 msgid "New Aluno"
-msgstr ""
+msgstr "Novo Aluno"
 
 #: Template/Alunos/index.ctp:18
 msgid "Alunos"
@@ -252,61 +323,77 @@ msgstr ""
 
 #: Template/Alunos/index.ctp:41
 #: Template/Alunos/view.ctp:66
-#: Template/Cursos/index.ctp:31
-#: Template/Cursos/view.ctp:52
+#: Template/Cursos/index.ctp:33
+#: Template/Cursos/view.ctp:48;79
+#: Template/Documentos/index.ctp:31
+#: Template/Documentos/view.ctp:48
 #: Template/Empresas/index.ctp:35
-#: Template/Empresas/view.ctp:60
+#: Template/Empresas/view.ctp:56
+#: Template/Estagios/index.ctp:37
 #: Template/Professores/index.ctp:29
 #: Template/Users/index.ctp:31
 msgid "View"
-msgstr ""
+msgstr "Visualizar"
 
 #: Template/Alunos/index.ctp:42
 #: Template/Alunos/view.ctp:67
-#: Template/Cursos/index.ctp:32
-#: Template/Cursos/view.ctp:53
+#: Template/Cursos/index.ctp:34
+#: Template/Cursos/view.ctp:49;80
+#: Template/Documentos/index.ctp:32
+#: Template/Documentos/view.ctp:49
 #: Template/Empresas/index.ctp:36
-#: Template/Empresas/view.ctp:61
+#: Template/Empresas/view.ctp:57
+#: Template/Estagios/index.ctp:38
 #: Template/Professores/index.ctp:30
 #: Template/Users/index.ctp:32
 msgid "Edit"
-msgstr ""
+msgstr "Editar"
 
 #: Template/Alunos/index.ctp:51
-#: Template/Cursos/index.ctp:41
+#: Template/Cursos/index.ctp:43
+#: Template/Documentos/index.ctp:41
 #: Template/Empresas/index.ctp:45
+#: Template/Estagios/index.ctp:47
 #: Template/Professores/index.ctp:39
 #: Template/Users/index.ctp:41
 msgid "first"
-msgstr ""
+msgstr "Primeiro"
 
 #: Template/Alunos/index.ctp:52
-#: Template/Cursos/index.ctp:42
+#: Template/Cursos/index.ctp:44
+#: Template/Documentos/index.ctp:42
 #: Template/Empresas/index.ctp:46
+#: Template/Estagios/index.ctp:48
 #: Template/Professores/index.ctp:40
 #: Template/Users/index.ctp:42
 msgid "previous"
-msgstr ""
+msgstr "Anterior"
 
 #: Template/Alunos/index.ctp:54
-#: Template/Cursos/index.ctp:44
+#: Template/Cursos/index.ctp:46
+#: Template/Documentos/index.ctp:44
 #: Template/Empresas/index.ctp:48
+#: Template/Estagios/index.ctp:50
 #: Template/Professores/index.ctp:42
 #: Template/Users/index.ctp:44
 msgid "next"
-msgstr ""
+msgstr "Próximo"
 
 #: Template/Alunos/index.ctp:55
-#: Template/Cursos/index.ctp:45
+#: Template/Cursos/index.ctp:47
+#: Template/Documentos/index.ctp:45
 #: Template/Empresas/index.ctp:49
+#: Template/Estagios/index.ctp:51
 #: Template/Professores/index.ctp:43
 #: Template/Users/index.ctp:45
 msgid "last"
-msgstr ""
+msgstr "Último"
 
 #: Template/Alunos/index.ctp:57
-#: Template/Cursos/index.ctp:47
+#: Template/Cursos/index.ctp:49
+#: Template/Documentos/index.ctp:47
 #: Template/Empresas/index.ctp:51
+#: Template/Estagios/index.ctp:53
 #: Template/Professores/index.ctp:45
 #: Template/Users/index.ctp:47
 msgid "Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total"
@@ -314,30 +401,28 @@ msgstr ""
 
 #: Template/Alunos/view.ctp:11
 msgid "Delete Aluno"
-msgstr ""
+msgstr "Deletar Aluno"
 
-#: Template/Alunos/view.ctp:24;54
-#: Template/Cursos/view.ctp:22;36
-#: Template/Empresas/view.ctp:22;44
+#: Template/Alunos/view.ctp:24
+#: Template/Cursos/view.ctp:24;38;63
+#: Template/Documentos/view.ctp:22;40
+#: Template/Empresas/view.ctp:22
 #: Template/Professores/view.ctp:20
 msgid "Nome"
 msgstr ""
 
 #: Template/Alunos/view.ctp:28
-#: Template/Cursos/view.ctp:37
-#: Template/Empresas/view.ctp:45
+#: Template/Cursos/view.ctp:64
 msgid "Rg"
-msgstr ""
+msgstr "RG"
 
 #: Template/Alunos/view.ctp:32
-#: Template/Cursos/view.ctp:38
-#: Template/Empresas/view.ctp:46
+#: Template/Cursos/view.ctp:65
 msgid "Cpf"
-msgstr ""
+msgstr "CPF"
 
 #: Template/Alunos/view.ctp:36
-#: Template/Cursos/view.ctp:39
-#: Template/Empresas/view.ctp:47
+#: Template/Cursos/view.ctp:66
 msgid "Email"
 msgstr ""
 
@@ -345,63 +430,138 @@ msgstr ""
 msgid "Curso"
 msgstr ""
 
-#: Template/Alunos/view.ctp:44;53
-#: Template/Cursos/view.ctp:26;35
-#: Template/Empresas/view.ctp:34;43
+#: Template/Alunos/view.ctp:44;55
+#: Template/Cursos/view.ctp:28;37;62
+#: Template/Documentos/view.ctp:26;39
+#: Template/Empresas/view.ctp:34;45
+#: Template/Estagios/view.ctp:32
 #: Template/Professores/view.ctp:24
 #: Template/Users/view.ctp:28
 msgid "Id"
 msgstr ""
 
 #: Template/Alunos/view.ctp:49
-msgid "Related Empresas"
+#: Template/Empresas/view.ctp:39
+msgid "Related Estagios"
+msgstr "Estágios Relacionados"
+
+#: Template/Alunos/view.ctp:53
+#: Template/Empresas/view.ctp:43
+msgid "Aluno Id"
 msgstr ""
 
-#: Template/Alunos/view.ctp:55
-#: Template/Empresas/view.ctp:26
-msgid "Razao Social"
+#: Template/Alunos/view.ctp:54
+#: Template/Empresas/view.ctp:44
+msgid "Empresa Id"
 msgstr ""
 
 #: Template/Alunos/view.ctp:56
-#: Template/Empresas/view.ctp:30
-msgid "Cnpj"
+#: Template/Empresas/view.ctp:46
+#: Template/Estagios/view.ctp:36
+msgid "Ano"
 msgstr ""
 
-#: Template/Cursos/add.ctp:18
+#: Template/Cursos/add.ctp:13
+#: Template/Cursos/edit.ctp:19
+#: Template/Cursos/index.ctp:13
+#: Template/Cursos/view.ctp:16
+#: Template/Documentos/add.ctp:10
+#: Template/Documentos/edit.ctp:16
+#: Template/Documentos/view.ctp:12
+msgid "List Documentos"
+msgstr "Listar Documentos"
+
+#: Template/Cursos/add.ctp:14
+#: Template/Cursos/edit.ctp:20
+#: Template/Cursos/index.ctp:14
+#: Template/Cursos/view.ctp:17
+#: Template/Documentos/index.ctp:10
+#: Template/Documentos/view.ctp:13
+msgid "New Documento"
+msgstr "Novo Documento"
+
+#: Template/Cursos/add.ctp:20
 msgid "Add Curso"
-msgstr ""
+msgstr "Adicionar Curso"
 
-#: Template/Cursos/edit.ctp:24
+#: Template/Cursos/edit.ctp:26
 #: Template/Cursos/view.ctp:10
 msgid "Edit Curso"
-msgstr ""
+msgstr "Editar Curso"
 
-#: Template/Cursos/index.ctp:16
+#: Template/Cursos/index.ctp:18
 msgid "Cursos"
 msgstr ""
 
 #: Template/Cursos/view.ctp:11
 msgid "Delete Curso"
-msgstr ""
+msgstr "Deletar Curso"
 
-#: Template/Cursos/view.ctp:31
-#: Template/Empresas/view.ctp:39
+#: Template/Cursos/view.ctp:33
+msgid "Related Documentos"
+msgstr "Documentos Relacionados"
+
+#: Template/Cursos/view.ctp:39
+#: Template/Documentos/view.ctp:31
+msgid "Descricao"
+msgstr "Descrição"
+
+#: Template/Cursos/view.ctp:58
 msgid "Related Alunos"
-msgstr ""
+msgstr "Alunos Relacionados"
 
-#: Template/Cursos/view.ctp:40
-#: Template/Empresas/view.ctp:48
+#: Template/Cursos/view.ctp:67
 msgid "Curso Id"
 msgstr ""
 
+#: Template/Documentos/add.ctp:18
+msgid "Add Documento"
+msgstr "Adicionar Documento"
+
+#: Template/Documentos/edit.ctp:24
+#: Template/Documentos/view.ctp:10
+msgid "Edit Documento"
+msgstr "Editar Documento"
+
+#: Template/Documentos/index.ctp:16
+msgid "Documentos"
+msgstr ""
+
+#: Template/Documentos/view.ctp:11
+msgid "Delete Documento"
+msgstr "Deletar Documento"
+
+#: Template/Documentos/view.ctp:35
+msgid "Related Cursos"
+msgstr "Cursos Relacionados"
+
+#: Template/Empresas/add.ctp:10
+#: Template/Empresas/edit.ctp:16
+#: Template/Empresas/view.ctp:12
+#: Template/Estagios/add.ctp:13
+#: Template/Estagios/edit.ctp:19
+#: Template/Estagios/index.ctp:13
+#: Template/Estagios/view.ctp:16
+msgid "List Empresas"
+msgstr "Listar Empresas"
+
 #: Template/Empresas/add.ctp:18
 msgid "Add Empresa"
-msgstr ""
+msgstr "Adicionar Empresa"
 
 #: Template/Empresas/edit.ctp:24
 #: Template/Empresas/view.ctp:10
 msgid "Edit Empresa"
-msgstr ""
+msgstr "Editar Empresa"
+
+#: Template/Empresas/index.ctp:10
+#: Template/Empresas/view.ctp:13
+#: Template/Estagios/add.ctp:14
+#: Template/Estagios/edit.ctp:20
+#: Template/Estagios/index.ctp:14
+#: Template/Estagios/view.ctp:17
+msgid "New Empresa"
+msgstr "Nova Empresa"
 
 #: Template/Empresas/index.ctp:16
 msgid "Empresas"
@@ -409,35 +569,70 @@ msgstr ""
 
 #: Template/Empresas/view.ctp:11
 msgid "Delete Empresa"
+msgstr "Deletar Empresa"
+
+#: Template/Empresas/view.ctp:26
+msgid "Razao Social"
+msgstr "Razão Social"
+
+#: Template/Empresas/view.ctp:30
+msgid "Cnpj"
+msgstr "CNPJ"
+
+#: Template/Estagios/add.ctp:20
+msgid "Add Estagio"
+msgstr "Adicionar Estágio"
+
+#: Template/Estagios/edit.ctp:26
+#: Template/Estagios/view.ctp:10
+msgid "Edit Estagio"
+msgstr "Editar Estágio"
+
+#: Template/Estagios/index.ctp:18
+msgid "Estagios"
+msgstr "Estágios"
+
+#: Template/Estagios/view.ctp:11
+msgid "Delete Estagio"
+msgstr "Deletar Estágio"
+
+#: Template/Estagios/view.ctp:24
+msgid "Aluno"
+msgstr ""
+
+#: Template/Estagios/view.ctp:28
+msgid "Empresa"
 msgstr ""
 
 #: Template/Layout/error.ctp:35
+#: Template/Error/error400.ctp:36
+#: Template/Error/error500.ctp:41
 msgid "Error"
-msgstr ""
+msgstr "Erro"
 
 #: Template/Layout/error.ctp:43
 msgid "Back"
-msgstr ""
+msgstr "Voltar"
 
 #: Template/Professores/add.ctp:10
 #: Template/Professores/edit.ctp:16
 #: Template/Professores/view.ctp:12
 msgid "List Professores"
-msgstr ""
+msgstr "Listar Professores"
 
 #: Template/Professores/add.ctp:16
 msgid "Add Professor"
-msgstr ""
+msgstr "Adicionar Professor"
 
 #: Template/Professores/edit.ctp:22
 #: Template/Professores/view.ctp:10
 msgid "Edit Professor"
-msgstr ""
+msgstr "Editar Professor"
 
 #: Template/Professores/index.ctp:10
 #: Template/Professores/view.ctp:13
 msgid "New Professor"
-msgstr ""
+msgstr "Novo Professor"
 
 #: Template/Professores/index.ctp:14
 msgid "Professores"
@@ -445,35 +640,35 @@ msgstr ""
 
 #: Template/Professores/view.ctp:11
 msgid "Delete Professor"
-msgstr ""
+msgstr "Deletar Professor"
 
 #: Template/Users/add.ctp:10
 #: Template/Users/edit.ctp:16
 #: Template/Users/view.ctp:12
 msgid "List Users"
-msgstr ""
+msgstr "Listar Usuários"
 
 #: Template/Users/add.ctp:16
 msgid "Add User"
-msgstr ""
+msgstr "Adicionar Usuários"
 
 #: Template/Users/edit.ctp:22
 #: Template/Users/view.ctp:10
 msgid "Edit User"
-msgstr ""
+msgstr "Editar Usuários"
 
 #: Template/Users/index.ctp:10
 #: Template/Users/view.ctp:13
 msgid "New User"
-msgstr ""
+msgstr "Novo Usuário"
 
 #: Template/Users/index.ctp:14
 msgid "Users"
-msgstr ""
+msgstr "Usuários"
 
 #: Template/Users/login.ctp:7
 msgid "Credentials"
-msgstr ""
+msgstr "Credenciais"
 
 #: Template/Users/login.ctp:10
 msgid "Login"
@@ -481,13 +676,21 @@ msgstr ""
 
 #: Template/Users/view.ctp:11
 msgid "Delete User"
-msgstr ""
+msgstr "Deletar Usuário"
 
 #: Template/Users/view.ctp:20
 msgid "Username"
-msgstr ""
+msgstr "Nome de Usuário"
 
 #: Template/Users/view.ctp:24
 msgid "Password"
+msgstr "Senha"
+
+#: Template/Error/error400.ctp:37
+msgid "The requested address {0} was not found on this server."
+msgstr ""
+
+#: Template/Error/error500.ctp:39
+msgid "An Internal Error Has Occurred"
 msgstr ""
 
