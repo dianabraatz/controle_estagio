@@ -14,10 +14,17 @@
 </nav>
 <div class="documentos index large-9 medium-8 columns content">
     <h3><?= __('Documentos') ?></h3>
+    <?php
+        echo $this->Form->create();
+        echo $this->Form->input("busca", array('label'=>"Pesquisar Documento:"));
+        //echo $this->Form->input("busca", array('label'=>"Pesquisar Aluno:", 'default'=>$this->request->query('busca')));
+        echo "<button>Procurar</button>";
+        //echo $this->Form->button(__('Procurar'));
+        echo $this->Form->end();
+    ?>
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('nome') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
@@ -25,7 +32,6 @@
         <tbody>
             <?php foreach ($documentos as $documento): ?>
             <tr>
-                <td><?= $this->Number->format($documento->id) ?></td>
                 <td><?= h($documento->nome) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $documento->id]) ?>

@@ -19,6 +19,12 @@ class ProfessoresController extends AppController
      */
     public function index()
     {
+        $busca = $this->request->data('busca');
+        if(!empty($busca)){
+            $this->paginate = [
+                'conditions' => ['nome LIKE ' => '%'.$busca.'%']
+            ];
+        }
         $professores = $this->paginate($this->Professores);
 
         $this->set(compact('professores'));

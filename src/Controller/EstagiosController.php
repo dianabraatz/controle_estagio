@@ -22,6 +22,16 @@ class EstagiosController extends AppController
         $this->paginate = [
             'contain' => ['Alunos', 'Empresas']
         ];
+        $busca = $this->request->data('busca');
+        if(!empty($busca)){
+            $this->paginate = [
+                'contain' => ['Alunos', 'Empresas'],
+                'conditions' => array (
+                    'OR' => array(
+                        array('alunos.nome LIKE' => '%'.$busca.'%'),
+                        array('empresas.nome LIKE ' => '%'.$busca.'%')))
+            ];
+        }
         $estagios = $this->paginate($this->Estagios);
 
         $this->set(compact('estagios'));

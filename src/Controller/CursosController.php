@@ -20,6 +20,13 @@ class CursosController extends AppController
      */
     public function index()
     {
+        $busca = $this->request->data('busca');
+        if(!empty($busca)){
+            $this->paginate = [
+                'conditions' => ['nome LIKE ' => '%'.$busca.'%']
+            ];
+        }
+
         $cursos = $this->paginate($this->Cursos);
 
         $this->set(compact('cursos'));
