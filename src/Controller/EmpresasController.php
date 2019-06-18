@@ -19,6 +19,15 @@ class EmpresasController extends AppController
      */
     public function index()
     {
+        $busca = $this->request->data('busca');
+        if(!empty($busca)){
+            $this->paginate = [
+                'conditions' => array (
+                    'OR' => array(
+                        array('nome LIKE' => '%'.$busca.'%'),
+                        array('cnpj LIKE ' => '%'.$busca.'%')))
+            ];
+        }
         $empresas = $this->paginate($this->Empresas);
 
         $this->set(compact('empresas'));

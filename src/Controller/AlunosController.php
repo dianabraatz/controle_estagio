@@ -22,6 +22,15 @@ class AlunosController extends AppController
         $this->paginate = [
             'contain' => ['Cursos']
         ];
+
+        $busca = $this->request->data('busca');
+        if(!empty($busca)){
+            $this->paginate = [
+                'contain' => ['Cursos'],
+                'conditions' => ['alunos.nome LIKE ' => '%'.$busca.'%']
+            ];
+        }
+
         $alunos = $this->paginate($this->Alunos);
 
         $this->set(compact('alunos'));

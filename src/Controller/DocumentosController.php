@@ -19,6 +19,12 @@ class DocumentosController extends AppController
      */
     public function index()
     {
+        $busca = $this->request->data('busca');
+        if(!empty($busca)){
+            $this->paginate = [
+                'conditions' => ['nome LIKE ' => '%'.$busca.'%']
+            ];
+        }
         $documentos = $this->paginate($this->Documentos);
 
         $this->set(compact('documentos'));
