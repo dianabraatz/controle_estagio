@@ -26,18 +26,31 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     </title>
     <?= $this->Html->meta('icon') ?>
 
+    <?= $this->Html->css('w3.css') ?>
     <?= $this->Html->css('base.css') ?>
     <?= $this->Html->css('style.css') ?>
+    <?= $this->Html->css('choices/choices.css') ?>
+    <?= $this->Html->css('sidebar.css') ?>
+
+    <?= $this->Html->script('choices/choices.js') ?>
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 </head>
+
 <body>
     <nav class="top-bar expanded" data-topbar role="navigation">
+        <div class="top-bar-section">
+            <ul class="left">
+                <li>
+                    <a href="#" id="sidebarButton" class="w3-center">&#9776;</a>
+                </li>
+            </ul>
+        </div>
         <ul class="title-area large-3 medium-4 columns">
             <li class="name">
-                <h1><a href=""><?= $this->fetch('title') ?></a></h1>
+                <h1><?= $this->Html->link($this->fetch('title'), ['action' => 'index']) ?></h1>
             </li>
         </ul>
         <div class="top-bar-section">
@@ -47,10 +60,35 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             </ul>
         </div>
     </nav>
+
+    <div id="overlay" class="w3-overlay w3-animate-opacity"></div>
+    <nav id="sidebar" class="w3-sidebar w3-card w3-indigo">
+        <ul class="w3-ul">
+            <li><?= $this->Html->link('Alunos',      ['controller' => 'Alunos',      'action' => 'index']) ?></li>
+            <li><?= $this->Html->link('Cursos',      ['controller' => 'Cursos',      'action' => 'index']) ?></li>
+            <li><?= $this->Html->link('Documentos',  ['controller' => 'Documentos',  'action' => 'index']) ?></li>
+            <li><?= $this->Html->link('Empresas',    ['controller' => 'Empresas',    'action' => 'index']) ?></li>
+            <li><?= $this->Html->link('Estágios',    ['controller' => 'Estagios',    'action' => 'index']) ?></li>
+            <li><?= $this->Html->link('Professores', ['controller' => 'Professores', 'action' => 'index']) ?></li>
+            <li><?= $this->Html->link(__('Users'),   ['controller' => 'Users',       'action' => 'index']) ?></li>
+        </ul>
+    </nav>
+
     <?= $this->Flash->render() ?>
-    <div class="container clearfix">
+
+    <div class="main-content container clearfix">
         <?= $this->fetch('content') ?>
     </div>
+
+    <script>
+    ;(function() {
+        new Choices("select:not([multiple])");
+        new Choices("select[multiple]", { removeItemButton: true });
+    })();
+    </script>
+
+    <?= $this->Html->script('sidebar.js') ?>
+
     <footer>
     </footer>
 </body>
