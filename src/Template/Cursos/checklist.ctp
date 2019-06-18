@@ -4,17 +4,19 @@ $cabecalhoDocumentos = [];
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Curso $curso
- * @var \App\Model\Entity\Aluno[]|\Cake\Collection\CollectionInterface $estagios
+ * @var \App\Model\Entity\Aluno[] $estagios
  */
 ?>
 <div class="cursos index content">
     <h3><?= __('Checklist') ?></h3>
+    <h4 style="border: none;"><?= $curso->nome ?></h4>
     <?= $this->Form->create() ?>
     <?= $this->Form->button(h('Salvar')) ?>
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('Alunos.nome', 'Aluno') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('Empresas.nome', 'Empresa') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('ano') ?></th>
                 <?php foreach($curso->documentos as $documento): ?>
                 <?php $cabecalhoDocumentos[] = $documento->id; ?>
@@ -27,6 +29,7 @@ $cabecalhoDocumentos = [];
             <?php /** @var \App\Model\Entity\Estagio $estagio */ ?>
             <tr>
                 <td><?= $estagio->aluno->nome ?></td>
+                <td><?= $estagio->empresa->nome ?></td>
                 <td><?= h($estagio->ano) ?></td>
                 <?php
                     /** @var \App\Model\Entity\DocumentoEstagio[] $documentos_estagios */
